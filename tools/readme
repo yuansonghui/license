@@ -1,0 +1,14 @@
+This program is used to register license in Website of  10.10.2.61/license/index
+运行需要安装依赖:
+nginx  1.12.1
+uwsgi  2.0.15
+django 1.11.4
+
+部署：
+手动安装好nginx, django, uwsgi(pip 安装)
+将tools 整个目录文件拷贝到/home 目录下
+执行/home/tools/script 目录下的start.sh 启动进程
+浏览器访问  10.10.2.61/license/index
+
+注： 
+服务器更新代码后需要执行 stop.sh 脚本，然后再执行start.sh 脚本

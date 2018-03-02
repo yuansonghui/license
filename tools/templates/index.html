@@ -1,0 +1,215 @@
+<!doctype html>
+<html>
+    <head>
+        <title>获取license</title>
+        <meta charset="utf8">
+        <link rel="stylesheet" href="../static/css/reset.css">
+        
+        <link rel="stylesheet" href="../static/css/license.css">
+    </head>
+
+    <body>
+        <div class="admin-license-header">
+            <h1>生成license</h1>
+        </div>
+        <div class="admin-license-body">
+            <form class="admin-license-form">
+                <div class="error-message"></div>
+                <div class="form-group">
+                    <label class="admin-license-label">版本</label>
+                    <div class="admin-license-input">
+                        <select class="form-control" name="version">
+                            <option value="2.9.1">2.9.1</option>
+                            <option value="2.7.6">2.7.6</option>                           
+                            <option value="mos">mos</option>                           
+                            <option value="2.7.5">2.7.5</option>                           
+                            <option value="2.7.3">2.7.3</option>  
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group sn-wrap">
+                    <label class="admin-license-label">sn</label>
+                    <div class="admin-license-input">
+                        <input type="text" class="form-control" name="sn" placeholder="请输入">
+                    </div>
+                </div>
+               
+                <div class="form-group">
+                    <label class="admin-license-label">类型</label>
+                    <div class="admin-license-input">
+                        <select class="form-control" name="license_type">
+                            <option value="time">时间license</option>
+                            <option class="feature-license" value="feature">特性license</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="time-license-wrap">
+                    <div class="form-group">
+                        <label class="admin-license-label">机器识别码</label>
+                        <div class="admin-license-input">
+                            <input type="text" class="form-control" name="machineid" placeholder="请输入">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="admin-license-label">有效期</label>
+                        <div class="active-time-wrap">
+                            <div class="admin-license-cell-wrap">
+                                <div class="admin-license-cell-input">
+                                    <select class="form-control" name="license_type">
+                                        <option value="0">0</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                    </select>
+                                </div>
+                                <label class="admin-license-cell-label">年</label>
+                            </div>
+                            
+                            <div class="admin-license-cell-wrap">
+                                <div class="admin-license-cell-input">
+                                    <select class="form-control" name="license_type">
+                                        <option value="0">0</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                    </select>
+                                </div>
+                                <label class="admin-license-cell-label">月</label>
+                            </div>
+                            
+                            <div class="admin-license-cell-wrap indefinite-duration-wrap">                                  
+                                <div class="admin-license-cell-input">
+                                    <input type="checkbox" />
+                                </div>
+                                
+                                <label class="admin-license-cell-label">无限期</label>    
+                            </div>
+                        </div>
+                       
+                    </div>
+
+                    <div class="form-group">
+                        <label class="admin-license-label">容量</label>
+                        <div class="admin-license-input">
+                            <input type="number" name="capacity">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group feature-type">
+                    <label class="admin-license-label">系统版本</label>
+                    <ul class="admin-lession-checkbox clearfix">
+                        <li>
+                            <label class="admin-license-label"><input type="radio" class="license-type" name="systemLicense" value="standardLicense" checked>标准版</label>
+                        </li>
+                        <li>
+                            <label class="admin-license-label"><input type="radio" class="license-type" name="systemLicense" value="advancedLicense">高级版</label>
+                        </li>
+                        <li>
+                            <label class="admin-license-label"><input type="radio" class="license-type" name="systemLicense" value="flagshipLicense">旗舰版</label>
+                        </li>
+                        <li>
+                            <label class="admin-license-label"><input type="radio" class="license-type" name="systemLicense" value="customizedLicense">自定义</label>
+                        </li>
+                      
+                    </ul>
+                    
+                    
+                </div>
+
+                <div class="form-group feature-type">
+                    <label class="admin-license-label">特性license<input type="checkbox" name="check-all" value="CHECK_ALL"></label>
+                    <ul class="admin-lession-checkbox clearfix">
+                        <li>
+                            <label class="admin-license-label"><input type="checkbox" class="license-type" name="license-type" value="OM_FEATURE_RACK_DETECH">机架感知</label>
+                        </li>
+                        <li>
+                            <label class="admin-license-label"><input type="checkbox" class="license-type" name="license-type" value="RBD_FEATURE_QOS">QOS设置</label>
+                        </li>
+                        <li>
+                            <label class="admin-license-label"><input type="checkbox" class="license-type" name="license-type" value="RBD_FEATURE_KRBD">本地块接口</label>
+                        </li>
+                        <li>
+                            <label class="admin-license-label"><input type="checkbox" class="license-type" name="license-type" value="OM_FEATURE_PHYSICAL_POOL">多故障域</label>                        
+                        </li>
+                        <li>
+                            <label class="admin-license-label"><input type="checkbox" class="license-type" name="license-type" value="OM_FEATURE_USERS_MANAGER">用户管理</label>
+                        </li>
+                        <li>
+                            <label class="admin-license-label"><input type="checkbox" class="license-type" name="license-type" value="OM_FEATURE_OSD_CACHE">SSD缓存加速</label>
+                        </li>
+                        <li>
+                            <label class="admin-license-label"><input type="checkbox" class="license-type" name="license-type" value="OM_FEATURE_SNMP">SNMP设置</label>
+                        </li>
+                        <li>
+                            <label class="admin-license-label"><input type="checkbox" class="license-type" name="license-type" value="OTHERS_FEATURE_RGW">对象存储</label>
+                        </li>
+                        <li>
+                            <label class="admin-license-label"><input type="checkbox" class="license-type" name="license-type" value="RBD_FEATURE_ISCSI">iSCSI接口</label>
+                        </li>
+                        <li class="parent-nav">
+                            <label class="admin-license-label om-feature-cluster-nodes">
+                                <input type="checkbox" name="license-type" value="" readonly="readonly">集群支持最大节点数</label>
+                            <ul class="sub-nav">
+                                <li>
+                                    <label class="admin-license-label"><input type="radio" name="clusterNodes" value="OM_FEATURE_CLUSTER_NODES_16">16节点</label>
+                                </li>
+                                <li>
+                                    <label class="admin-license-label"><input type="radio" name="clusterNodes" value="OM_FEATURE_CLUSTER_NODES_all">无限制</label>
+                                </li>    
+                                <li>
+                                    <label class="admin-license-label"><input type="radio" name="clusterNodes" value="">清空</label>
+                                </li>                            
+                            </ul>
+                        </li>
+                        <li>
+                            <label class="admin-license-label"><input type="checkbox" name="license-type" value="RBD_FEATURE_LUN_MASKING">Lun Masking接口</label>
+                        </li>
+                        <li>
+                            <label class="admin-license-label"><input type="checkbox" name="license-type" value="OTHERS_FEATURE_VERSION_INFO">商用</label>
+                        </li>
+
+                        <li>
+                            <label class="admin-license-label"><input type="checkbox" name="license-type" value="OTHERS_FEATURE_NFS">NFS</label>
+                        </li>
+
+                        <li>
+                            <label class="admin-license-label"><input type="checkbox" name="license-type" value="RBD_FEATURE_FC">FC</label>
+                        </li>
+                    </ul>
+                    
+                    
+                </div>
+
+                <div class="form-group admin-license-btns">
+                    <button type="button" class="btn btn-success-sds get-license">确定</button>
+                    <button type="button" class="btn btn-default-sds" ng-click="">取消</button>                
+                </div>
+
+                <div class="form-group license-value">
+                    <label class="admin-license-label">license值</label>
+                    <div class="admin-license-input">
+                        <input type="text" readonly>
+                    </div>
+                </div>
+                
+            </form>
+        </div>    
+        <script src="../static/js/jquery-1.11.1.js"></script>
+        <script src="../static/js/license.js"></script>
+    </body>
+</html>
